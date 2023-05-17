@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Kosugi&family=Noto+Sans+Mono:wght@300&family=Signika+Negative:wght@300;700&family=Signika:wght@300&display=swap');
+@import url('https://fonts.cdnfonts.com/css/dimbo');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+
+} 
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+
+    font-size: 1.2em;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+/* barre de navigation desktop */
+
+.navbar {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul {
+    display: flex;    
+}
+
+.navbar ul li a {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 20px;
+    font-family: 'Dimbo', sans-serif;
+    font-size: 2rem;
+    color: #fff;
+  }
+
+.navbar ul li a:hover {
+    color: #7E161A;
+    transition: .3s;
+}
+
+.navbar .logo {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    left: 40px;
+    top: 10px
+}
+
+ .navbar .menuBurger {
+    display: none;
+}
+
+
+#banner {
+    background-image:url("https://cdn.discordapp.com/attachments/1083076605771001946/1085566233526669383/banniere_.png");
+    width: 100%;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 20px;
+}
+
+h1, h2 , footer{
+    font-family: 'Dimbo', sans-serif;
+}
+
+h1, h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: #fff;
+
+}
+h1{
+    padding-bottom: 20px;
+}
+
+p{
+    color: #fff;
+}
+
+section {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+
+
+/* Footer */
+footer {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    background: #7E161A;
+    padding-top: 15px;
+    padding-left: 30px;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+#hiddenButton {
+    display: none;
+    border-radius: 50%;
+    border: solid #7E161A;    
+    background-color: black;
+    font-family: 'Dimbo', sans-serif;
+    font-size: 2rem;
+    font-weight: bolder;
+    align-items: center;
+    width: 70px;
+    height: 70px;    
+    position: fixed;
+    right: 80px;
+    bottom: 80px;
+    
+}
+
+
+#hiddenButton.scrollTopButton {
+    display: block;
+}
+
+#hiddenButton:hover {
+    transform: translateY(-10px);
+}
+
+#hiddenButton a {
+    color: white;
+
+}
+
+
+
+@media screen and (max-width: 400px) {        
+    .navbar {
+        width: 100%;
+        height: 60px;
+        display: flex;
+    }
+    
+    .navbar .menuBurger {
+        display: initial;
+    }
+    
+    .navbar .logo {
+        height: 30px;
+        width: 30px;
+        position: absolute;
+        top: 15px;
+        left: 30px;
+    }
+    
+    .navLinks {   
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-image: url("../../assets/images/BG_menu_burger.png");
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+    
+    .navLinks.menu-mobile {
+        margin-left: 0;
+    }
+    
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;  
+    }
+    
+    .navbar ul li a {
+        display: block;
+        padding: 1rem;
+        text-shadow: 2px 2px 2px black;
+    }
+    
+    .navbar .menuBurger {
+        position: absolute;
+        right: 30px;
+        top: 15px;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    #banner {
+      
+        width: 100%;
+        height: 200px;
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 20px;
+    }
+    h1,h2,h3
+    {
+        text-align: center;
+        /* padding-top: 50px; */
+    }
+    h1{
+        padding-bottom: 20px;
+    }
+    #home{
+        padding: 0 10px 0 10px;
+    }
+
+    section{
+        width: 100%;
+    }
+
+
+    #hiddenButton {
+        display: none;
+        font-size: 1.5rem;
+        width: 50px;
+        height: 50px;    
+        right: 20px;
+        bottom: 50px;
+    }
+
+    footer {
+        height: 40px;
+        padding: 10px;
+        padding-left: 15px;
+        font-size: 1.2rem;
+    }
+    
+}
